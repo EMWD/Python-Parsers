@@ -6,7 +6,6 @@ from config import *
 
 
 
-
 def getSiteHtml(siteUrl):
 		response = requests.get(siteUrl)
 		return response.text
@@ -15,7 +14,6 @@ def parseDate(html):
 	soup = bs(html, 'lxml')
 	parseRes = soup.find_all('a')[-1].get('href')
 	return parseRes
-
 
 
 N = 3 #number of visits to the site
